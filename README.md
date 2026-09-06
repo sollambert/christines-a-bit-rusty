@@ -50,7 +50,6 @@ You can declare an empty string by calling ```new();``` from the String struct i
 ```Rust
 let my_empty_string = String::new();
 ```
-This is how we will also create new instances of our ```Rand``` struct that we will use later in this exercise.
 
 A thing to note, just as there are multiple data types to represent strings/Strings, we also have distinct data types for different integer/float primitives.
 ```Rust
