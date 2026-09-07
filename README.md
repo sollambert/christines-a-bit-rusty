@@ -1,21 +1,21 @@
 # Christine's A Bit Rusty
 The goal with this exercise is to learn the basic syntaxes of Rust and putting them together to build a Magic 8 Ball program that outputs a text response from a question and exits when the phrase "Goodbye" is sent to stdin.
 
-To begin this exercise, you'll have to install the rust tool chain following [this](https://rust-lang.org/tools/install/) guide.
+To begin this exercise, you'll have to install the Rust tool chain following [this](https://Rust-lang.org/tools/install/) guide.
 
-Once rustup is installed, verify your installation by running ```rustc --version``` in your terminal.
+Once Rustup is installed, verify your installation by running ```Rustc --version``` in your terminal.
 
-Cargo is the package manager of the Rust ecosystem, you can find documentation on how to use it [here](https://doc.rust-lang.org/cargo/), but the commands necessary to complete this exercise will be listed in the steps below.
+Cargo is the package manager of the Rust ecosystem, you can find documentation on how to use it [here](https://doc.Rust-lang.org/cargo/), but the commands necessary to complete this exercise will be listed in the steps below.
 
 ## Setup
-1. Create a new rust crate by executing ```cargo init``` in your terminal. This will create your src folder with a file named main.rs (the entry point of your application) and your Cargo.toml file (the file that describes the metadata and dependencies of your application).
+1. Create a new Rust crate by executing ```cargo init``` in your terminal. This will create your src folder with a file named main.rs (the entry point of your application) and your Cargo.toml file (the file that describes the metadata and dependencies of your application).
 2. In the main.rs file you should already have a working example of Rust's hello world.
 3. Once your package is created, add the rand crate to your application by executing ```cargo add rand``` in your terminal as we will be needing it to create our Magic 8 Ball.
 4. If you are using VSCode, ensure that you have the Rust Analyzer extension installed, as it is necessary to program in Rust happily.
 
 ## Concepts
 ### Variables
-All variables in rust are *immutable* by default. If you would like to change the mutability of a variable such that you can assign it a new value after declaration, you must declare it as *mut*
+All variables in Rust are *immutable* by default. If you would like to change the mutability of a variable such that you can assign it a new value after declaration, you must declare it as *mut*
 ```Rust
 let mut x = 0;
 x += 1;
@@ -328,4 +328,4 @@ Yes, but here are some important things you might want to know to help you along
 
 4. You can easily generate a random integer from the rand crate by calling ```rand::from_range(R)``` and passing in a Range as an argument.
 
-This should be all you need to know to get a fully functioning Magic 8 Ball up and running in Rust, but if you run into any issues (shit's hard) u kno i got u
+This should be all you need to know to get a fully functioning Magic 8 Ball up and running in Rust, but if you run into any problems, please open an issue in the repo and I will respons as quickly as possible.
