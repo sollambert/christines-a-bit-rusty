@@ -111,7 +111,13 @@ assert_eq!(my_vec[1], "two");
 ```
 
 ### Loopdy Loops
-1. ```while``` loops function very similarly in Rust as most other languages
+1. If you would like to denote an infinite loop, you can simple use the ```loop``` keyword.
+    ```Rust
+    loop {
+        do_forever();
+    }
+    ```
+2. ```while``` loops function very similarly in Rust as most other languages
     ```Rust
     while true {
         do();
@@ -119,7 +125,7 @@ assert_eq!(my_vec[1], "two");
     }
     ```
     This while loop will execute do() once and break the loop.
-2. ```for``` loops in Rust are quite different from most other languages, and are made to be very simple to declare
+3. ```for``` loops in Rust are quite different from most other languages, and are made to be very simple to declare
     ```Rust
     for [variable_name] in [iterator] {
         do();
@@ -333,4 +339,39 @@ Yes, but here are some important things you might want to know to help you along
 
 4. You can easily generate a random integer from the rand crate by calling ```rand::from_range(R)``` and passing in a Range as an argument.
 
+5. Input from stdin will contain a *new line* character at the end (```\n```), make sure to account for this if you are matching input to an expected value
+
+Here is the data your Magic 8 Ball should rely on for responses, this constant can be placed outside of your main function below your imports
+```Rust
+const RESPONSES: [&str; 20] = [
+    // Affirmatives
+    "It is certain",
+    "It is decidedly so",
+    "Without a doubt",
+    "Yes definitely",
+    "You may rely on it",
+    "As I see it, yes",
+    "Most likely",
+    "Outlook good",
+    "Yes",
+    "Signs point to yes",
+    // Non-committal
+    "Reply hazy, try again",
+    "Ask again later",
+    "Better not tell you now",
+    "Cannot predict now",
+    "Concentrate and ask again",
+    // Negatives
+    "Don't count on it",
+    "My reply is no",
+    "My sources say no",
+    "Outlook not so good",
+    "Very doubtful"
+];
+```
+
 This should be all you need to know to get a fully functioning Magic 8 Ball up and running in Rust, but if you run into any problems, please open an issue in the repo and I will respons as quickly as possible.
+
+### Extra Credit
+1. Match the last character of your input to ensure you are getting a question. If the input is not a question, return a generic response.
+2. Actually print a Magic 8 Ball using a generated string with the response in the center
