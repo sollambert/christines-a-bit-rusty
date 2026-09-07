@@ -51,6 +51,11 @@ You can declare an empty string by calling ```new();``` from the String struct i
 let my_empty_string = String::new();
 ```
 
+To get a &str from a String, we simply call ```.as_str()``` on our String
+```Rust
+let my_new_str: &str = my_string.as_str()
+```
+
 A thing to note, just as there are multiple data types to represent strings/Strings, we also have distinct data types for different integer/float primitives.
 ```Rust
 // signed integers
